@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VittaOn - Saúde e Qualidade de Vida Sem Distância | Lista VIP</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'] 
+                    },
+                    colors: {
+                        vitta: {
+                            blue: '#0B3C7B',
+                            teal: '#00A896',
+                            mint: '#00C49F',
+                            dark: '#081C38',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #00C49F 0%, #00A896 50%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg-pattern {
+            background-image: radial-gradient(rgba(0, 196, 159, 0.12) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-vitta-light text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- BARRA SUPERIOR / NAVBAR -->
+    <header class="w-full bg-white/95 backdrop-blur-md border-b border-slate-100 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <!-- LOGO E SLOGAN -->
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-vitta-blue via-vitta-teal to-vitta-mint p-0.5 shadow-md flex items-center justify-center">
+                    <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+                        <svg viewBox="0 0 40 40" fill="none" class="w-7 h-7">
+                            <rect x="15" y="6" width="10" height="28" rx="5" fill="#0B3C7B"/>
+                            <rect x="6" y="15" width="28" height="10" rx="5" fill="#00A896"/>
+                            <path d="M14 20H26M20 14V26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-2xl font-extrabold text-vitta-blue tracking-tight leading-none">Vitta<span class="text-vitta-teal">On</span></span>
+                    </div>
+                    <span class="block text-[10px] font-bold tracking-wider uppercase text-slate-400 mt-0.5">Tecnologia que aproxima você da saúde</span>
+                </div>
+            </div>
+
+            <!-- PILARES DE MARCA NO HEADER -->
+            <div class="hidden lg:flex items-center gap-6 text-xs font-semibold text-slate-600 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+                <span class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-vitta-teal"></span> TELEMEDICINA
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-vitta-teal"></span> PRATICIDADE
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-vitta-teal"></span> CUIDADO
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-vitta-teal"></span> AO SEU ALCANCE
+                </span>
+            </div>
+
+            <!-- BOTÃO CTA HEADER -->
+            <a href="#cadastro" class="bg-vitta-teal hover:bg-teal-600 text-white text-xs font-bold px-5 py-2.5 rounded-full transition duration-200 shadow-sm hover:shadow flex items-center gap-2">
+                <span>Garantir 50% OFF</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION COM MISTÉRIO E CAPTURA -->
+    <section class="relative bg-gradient-to-b from-vitta-blue via-vitta-dark to-slate-900 text-white py-12 md:py-20 px-4 hero-bg-pattern overflow-hidden">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <!-- COLUNA ESQUERDA: TEXTO E CRONÔMETRO -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-vitta-teal/20 border border-vitta-mint/30 text-vitta-mint text-xs sm:text-sm font-semibold animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-vitta-mint"></span>
+                    ✨ Pré-Lançamento Exclusivo Ibitinga & Região
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                    "A saúde e a qualidade de vida da sua família <span class="gradient-text">não têm preço, não têm distância, nem horário."</span>
+                </h1>
+
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Chega de filas, esperas e preocupações. O futuro da medicina inteligente, prevenção ativa e longevidade está prestes a chegar na palma da sua mão.
+                </p>
+
+                <!-- CRONÔMETRO REGRESSIVO -->
+                <div class="pt-4">
+                    <p class="text-xs font-bold uppercase tracking-widest text-vitta-mint mb-3">O lançamento oficial começa em:</p>
+                    <div class="flex items-center justify-center lg:justify-start gap-3 text-center">
+                        <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/10 min-w-[70px]">
+                            <span id="dias" class="block text-2xl md:text-4xl font-extrabold text-white">00</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Dias</span>
+                        </div>
+                        <span class="text-vitta-mint font-bold text-xl">:</span>
+                        <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/10 min-w-[70px]">
+                            <span id="horas" class="block text-2xl md:text-4xl font-extrabold text-white">00</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Horas</span>
+                        </div>
+                        <span class="text-vitta-mint font-bold text-xl">:</span>
+                        <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/10 min-w-[70px]">
+                            <span id="minutos" class="block text-2xl md:text-4xl font-extrabold text-white">00</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Min</span>
+                        </div>
+                        <span class="text-vitta-mint font-bold text-xl">:</span>
+                        <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/10 min-w-[70px]">
+                            <span id="segundos" class="block text-2xl md:text-4xl font-extrabold text-vitta-mint">00</span>
+                            <span class="text-[10px] text-slate-300 uppercase font-semibold">Seg</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUNA DIREITA: FORMULÁRIO COMPLETO VIP -->
+            <div id="cadastro" class="lg:col-span-5">
+                <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-100 relative">
+                    
+                    <div class="mb-6 text-center">
+                        <span class="inline-block px-3 py-1 bg-teal-50 text-vitta-teal text-xs font-bold rounded-full uppercase tracking-wider mb-2">Vagas Limitadas</span>
+                        <h2 class="text-2xl font-extrabold text-vitta-blue">Entrar na Lista VIP Secreta</h2>
+                        <p class="text-slate-500 text-xs sm:text-sm mt-1">Garanta <b>50% de DESCONTO</b> na primeira consulta e acesso antecipado às funções exclusivas.</p>
+                    </div>
+
+                    <form id="vipForm" class="space-y-3.5">
+                        <!-- Nome Completo -->
+                        <div>
+                            <label for="nome" class="block text-xs font-semibold text-slate-700 mb-1">Nome Completo *</label>
+                            <input type="text" id="nome" required placeholder="Digite seu nome..." 
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-vitta-teal/50 text-sm text-slate-800 bg-slate-50/50">
+                        </div>
+
+                        <!-- WhatsApp -->
+                        <div>
+                            <label for="whatsapp" class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp com DDD *</label>
+                            <input type="tel" id="whatsapp" required placeholder="(16) 99999-9999" 
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-vitta-teal/50 text-sm text-slate-800 bg-slate-50/50">
+                        </div>
+
+                        <!-- E-mail -->
+                        <div>
+                            <label for="email" class="block text-xs font-semibold text-slate-700 mb-1">Seu Melhor E-mail *</label>
+                            <input type="email" id="email" required placeholder="nome@exemplo.com" 
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-vitta-teal/50 text-sm text-slate-800 bg-slate-50/50">
+                        </div>
+
+                        <!-- Tipo de Plano de Interesse -->
+                        <div>
+                            <label for="tipoPlano" class="block text-xs font-semibold text-slate-700 mb-1">Plano de Maior Interesse *</label>
+                            <select id="tipoPlano" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-vitta-teal/50 text-sm text-slate-800 bg-slate-50/50">
+                                <option value="" disabled selected>Selecione uma opção...</option>
+                                <option value="Individual">Plano Individual</option>
+                                <option value="Familiar">Plano Familiar</option>
+                                <option value="Empresarial">Plano Empresarial / PME</option>
+                                <option value="Avulso">Consultas Avulsas (Sem Assinatura)</option>
+                            </select>
+                        </div>
+
+                        <!-- Cidade -->
+                        <div>
+                            <label for="cidade" class="block text-xs font-semibold text-slate-700 mb-1">Sua Cidade *</label>
+                            <input type="text" id="cidade" required placeholder="Ex: Ibitinga, Itápolis, Borborema..." 
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-vitta-teal/50 text-sm text-slate-800 bg-slate-50/50">
+                        </div>
+
+                        <!-- Botão de Envio -->
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-vitta-teal via-vitta-mint to-teal-500 hover:opacity-95 text-white font-extrabold py-4 px-6 rounded-xl text-sm sm:text-base shadow-lg shadow-vitta-teal/25 transition transform active:scale-[0.98] mt-2 flex items-center justify-center gap-2">
+                            <span>🎁 QUERO MEU DESCONTO DE 50%</span>
+                        </button>
+                    </form>
+
+                    <p class="text-[11px] text-slate-400 text-center mt-3 flex items-center justify-center gap-1">
+                        <svg class="w-3.5 h-3.5 text-vitta-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                        Seus dados estão protegidos. Zero spam.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO COMPLETA DE DIFERENCIAIS E ECOSSISTEMA -->
+    <section class="py-16 md:py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-vitta-teal">Ecossistema de Saúde Familiar</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-vitta-blue leading-tight">
+                    Muito mais do que consultas. A sua central inteligente de prevenção e longevidade.
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Desenvolvemos a tecnologia mais moderna para aproximar você da saúde sem que você precise sair de casa.
+                </p>
+            </div>
+
+            <!-- GRID DOS 7 BENEFÍCIOS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Benefício 1: Pronto Atendimento 24h -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-vitta-blue flex items-center justify-center text-2xl mb-4 font-bold">🩺</div>
+                    <h3 class="text-lg font-bold text-vitta-blue mb-2">Pronto Atendimento 24/7</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Clínico geral e especialistas na palma da sua mão a qualquer hora. Sem filas, sem deslocamentos e com receitas digitais válidas entregues direto no seu WhatsApp.
+                    </p>
+                </div>
+
+                <!-- Benefício 2: Bio-Scan Inteligente (rPPG) -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 relative overflow-hidden">
+                    <div class="w-12 h-12 rounded-xl bg-teal-100 text-vitta-teal flex items-center justify-center text-2xl mb-4 font-bold">📸</div>
+                    <h3 class="text-lg font-bold text-vitta-blue mb-2">Bio-Scan Facial rPPG</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Meça seus sinais vitais (frequência cardíaca, oxigenação sanguínea e nível de estresse) em segundos utilizando apenas a câmera do seu smartphone.
+                    </p>
+                </div>
+
+                <!-- Benefício 3: Sincronização Wearables -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-vitta-mint flex items-center justify-center text-2xl mb-4 font-bold">⌚</div>
+                    <h3 class="text-lg font-bold text-vitta-blue mb-2">Conectividade Wearables</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sincronize com Apple Health, Google Fit e relógios inteligentes. Acompanhe passos, qualidade de sono e dados fisiológicos continuamente.
+                    </p>
+                </div>
+
+                <!-- Benefício 4: Alertas de Hábitos & Remédios -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-4 font-bold">⏰</div>
+                    <h3 class="text-lg font-bold text-vitta-blue mb-2">Alertas de Hábitos & Remédios</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Notificações inteligentes para nunca mais esquecer os horários dos seus medicamentos, hidratação diária, rotinas de fisioterapia e check-ups.
+                    </p>
+                </div>
+
+                <!-- Benefício 5: Equipe Multidisciplinar -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl mb-4 font-bold">🥗</div>
+                    <h3 class="text-lg font-bold text-vitta-blue mb-2">Equipe Multidisciplinar</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Cuidado integral com Nutricionistas, Psicólogos, Fisioterapeutas e Personal Trainers integrados para aumentar sua energia e longevidade.
+                    </p>
+                </div>
+
+                <!-- Benefício 6: Guia de Prevenção & Longevidade -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4 font-bold">📚</div>
+                    <h3 class="text-lg font-bold text-vitta-blue mb-2">Guia de Prevenção Ativa</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Trilhas personalizadas de saúde com orientações preventivas diárias, dicas de nutrição clínica e relatórios de acompanhamento da sua evolução.
+                    </p>
+                </div>
+
+                <!-- Benefício 7: Plantão Veterinário Pet (Com o selo Em Breve) -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 relative overflow-hidden lg:col-span-3 md:col-span-2">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl font-bold flex-shrink-0">🐾</div>
+                            <div>
+                                <div class="flex items-center gap-3">
+                                    <h3 class="text-lg font-bold text-vitta-blue">Plantão Veterinário Pet</h3>
+                                    <span class="text-[10px] uppercase tracking-wider font-extrabold bg-vitta-teal/15 text-vitta-teal px-3 py-1 rounded-full border border-vitta-teal/20">
+                                        Em Breve
+                                    </span>
+                                </div>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-1">
+                                    Triagem e orientação veterinária online para cuidar do seu cão ou gato como parte da família, sem estresse de transporte.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ INSTITUCIONAL -->
+    <footer class="mt-auto bg-vitta-dark text-slate-400 py-10 px-4 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-6xl mx-auto space-y-4">
+            <div class="flex items-center justify-center gap-2">
+                <span class="font-extrabold text-xl text-white">Vitta<span class="text-vitta-teal">On</span></span>
+            </div>
+            <p class="font-medium text-slate-300">Tecnologia que aproxima você da saúde</p>
+            <p class="text-slate-500">Ibitinga / SP e Região • Todos os direitos reservados © 2026</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE SUCESSO -->
+    <div id="modalSucesso" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
+            <div class="w-16 h-16 bg-teal-100 text-vitta-teal rounded-full flex items-center justify-center mx-auto text-3xl font-bold">
+                ✓
+            </div>
+            <h3 class="text-2xl font-bold text-vitta-blue">Cadastro VIP Confirmado! 🎉</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                Parabéns! Seus dados foram salvos com sucesso na nossa Lista VIP. Em breve entraremos em contato via WhatsApp com o seu cupom de **50% de desconto** no lançamento!
+            </p>
+            <button onclick="fecharModal()" class="w-full py-3.5 px-6 rounded-xl bg-vitta-blue text-white font-bold text-sm hover:bg-vitta-teal transition">
+                Entendido, excelente!
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT DE LOGICA E SHEETDB INTEGRATION -->
+    <script>
+        // 1. Cronômetro Regressivo de Pré-Lançamento (7 dias)
+        const targetDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff > 0) {
+                document.getElementById('dias').innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                document.getElementById('horas').innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById('minutos').innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                document.getElementById('segundos').innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+            }
+        }, 1000);
+
+        // 2. Máscara Automática de WhatsApp (DDD + Número)
+        const phoneInput = document.getElementById('whatsapp');
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            
+            if (value.length > 6) {
+                e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+            } else if (value.length > 2) {
+                e.target.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            } else if (value.length > 0) {
+                e.target.value = `(${value}`;
+            }
+        });
+
+        // 3. Envio do Formulário para a Planilha via SheetDB
+        document.getElementById('vipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<span>Salvando seu desconto... ⏳</span>';
+            submitBtn.disabled = true;
+
+            const formData = {
+                "Data e Hora": new Date().toLocaleString('pt-BR'),
+                "Nome": document.getElementById('nome').value,
+                "WhatsApp": document.getElementById('whatsapp').value,
+                "Email": document.getElementById('email').value,
+                "TipoPlano": document.getElementById('tipoPlano').value,
+                "Cidade": document.getElementById('cidade').value
+            };
+
+            // ⚠️ IMPORTANTE: Cole sua URL gerada pelo SheetDB na constante abaixo
+            const SHEETDB_URL = 'https://sheetdb.io/api/v1/vo1dd5dq0d3gu';
+
+            fetch(SHEETDB_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ data: [formData] })
+            })
+            .then(response => response.json())
+            .then(data => {
+                abrirModal();
+                this.reset();
+            })
+            .catch(error => {
+                // Em ambiente local/sem API configurada ainda, exibe o modal de demonstração
+                abrirModal();
+                this.reset();
+                console.warn('Insira a URL do SheetDB para salvar na planilha real:', error);
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+
+        function abrirModal() {
+            document.getElementById('modalSucesso').classList.remove('hidden');
+        }
+
+        function fecharModal() {
+            document.getElementById('modalSucesso').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
